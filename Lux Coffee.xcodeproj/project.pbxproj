@@ -22,6 +22,7 @@
 		8DFC282118CFE27B00822516 /* Lux_CoffeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC282018CFE27B00822516 /* Lux_CoffeeTests.m */; };
 		8DFC283518D222E000822516 /* CCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC283418D222E000822516 /* CCMainViewController.m */; };
 		8DFC283818D224F500822516 /* CCCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC283718D224F500822516 /* CCCalendarController.m */; };
+		8DFC283B18D23FF500822516 /* CCCalendarEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC283A18D23FF500822516 /* CCCalendarEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8DFC283418D222E000822516 /* CCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMainViewController.m; sourceTree = "<group>"; };
 		8DFC283618D224F500822516 /* CCCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarController.h; sourceTree = "<group>"; };
 		8DFC283718D224F500822516 /* CCCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarController.m; sourceTree = "<group>"; };
+		8DFC283918D23FF500822516 /* CCCalendarEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarEvents.h; sourceTree = "<group>"; };
+		8DFC283A18D23FF500822516 /* CCCalendarEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarEvents.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				8DFC283718D224F500822516 /* CCCalendarController.m */,
 				8DFC283318D222E000822516 /* CCMainViewController.h */,
 				8DFC283418D222E000822516 /* CCMainViewController.m */,
+				8DFC283918D23FF500822516 /* CCCalendarEvents.h */,
+				8DFC283A18D23FF500822516 /* CCCalendarEvents.m */,
 				8DFC281A18CFE27B00822516 /* Lux CoffeeTests */,
 				8DFC280D18CFE27B00822516 /* Images.xcassets */,
 				8DFC27FC18CFE27B00822516 /* Supporting Files */,
@@ -257,6 +262,7 @@
 			files = (
 				8DFC280618CFE27B00822516 /* CCAppDelegate.m in Sources */,
 				8DFC283818D224F500822516 /* CCCalendarController.m in Sources */,
+				8DFC283B18D23FF500822516 /* CCCalendarEvents.m in Sources */,
 				8DFC283518D222E000822516 /* CCMainViewController.m in Sources */,
 				8DFC280218CFE27B00822516 /* main.m in Sources */,
 			);

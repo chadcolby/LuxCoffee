@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol GoogleCalendarDelegate <NSObject>
+
+@optional
+
+- (void)updateReturnedArray;
+
+@end
+
 @interface CCCalendarController : NSObject
+
+@property (unsafe_unretained) id<GoogleCalendarDelegate> delegate;
+
++ (CCCalendarController *)sharedCalendarManager;
+
+- (NSURL *)getEventsFromCalendarWithCalendarID:(NSString *)googleCalID;
+- (void)updateEventsFromGoogleCalendar;
+- (NSArray *)updatedEventsList;
 
 @end
