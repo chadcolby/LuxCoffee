@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-TE-ZNm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-TE-ZNm">
                                 <rect key="frame" x="20" y="498" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="e1z-SI-Ux0"/>
+                                </constraints>
                                 <state key="normal" title="Get Events">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,16 +29,16 @@
                                     <action selector="updateCalendar:" destination="Gl2-el-PJ9" eventType="touchUpInside" id="ePt-0a-hQp"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-J3-a2D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-J3-a2D">
                                 <rect key="frame" x="0.0" y="20" width="320" height="470"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCell" textLabel="gaT-ZE-dfA" detailTextLabel="UjD-z8-lVr" style="IBUITableViewCellStyleSubtitle" id="TIP-Sc-SpS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="calendarCell" textLabel="gaT-ZE-dfA" detailTextLabel="UjD-z8-lVr" style="IBUITableViewCellStyleSubtitle" id="TIP-Sc-SpS">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIP-Sc-SpS" id="LCk-cw-yDh">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gaT-ZE-dfA">
@@ -59,6 +62,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vE7-TE-ZNm" secondAttribute="bottom" constant="20" symbolic="YES" id="5tq-Rc-oV6"/>
+                            <constraint firstItem="vE7-TE-ZNm" firstAttribute="leading" secondItem="UZ9-44-NAs" secondAttribute="leading" constant="20" symbolic="YES" id="92j-je-PlL"/>
+                            <constraint firstItem="vE7-TE-ZNm" firstAttribute="top" secondItem="o1m-J3-a2D" secondAttribute="bottom" constant="8" symbolic="YES" id="Co5-Nh-eW8"/>
+                            <constraint firstItem="o1m-J3-a2D" firstAttribute="top" secondItem="UZ9-44-NAs" secondAttribute="top" constant="20" symbolic="YES" id="JFa-pR-Vwv"/>
+                            <constraint firstAttribute="trailing" secondItem="vE7-TE-ZNm" secondAttribute="trailing" constant="20" symbolic="YES" id="K5i-cU-Tq2"/>
+                            <constraint firstItem="o1m-J3-a2D" firstAttribute="leading" secondItem="UZ9-44-NAs" secondAttribute="leading" id="S4P-5U-MGV"/>
+                            <constraint firstItem="o1m-J3-a2D" firstAttribute="centerX" secondItem="vE7-TE-ZNm" secondAttribute="centerX" id="hRs-4o-Sse"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="o1m-J3-a2D" id="NeP-jt-j7d"/>

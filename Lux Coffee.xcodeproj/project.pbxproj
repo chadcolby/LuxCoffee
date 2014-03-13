@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68D3F98B3D9846B298E33B50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6354AEFB1AB408A977D3DC7 /* libPods.a */; };
+		8D889AC118D2543B001198F5 /* CCEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */; };
+		8D889AC218D2543B001198F5 /* CCEventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */; };
+		8D889AC518D25B2C001198F5 /* CCCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889AC418D25B2C001198F5 /* CCCalendarCell.m */; };
 		8DFC27F618CFE27B00822516 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F518CFE27B00822516 /* Foundation.framework */; };
 		8DFC27F818CFE27B00822516 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F718CFE27B00822516 /* CoreGraphics.framework */; };
 		8DFC27FA18CFE27B00822516 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F918CFE27B00822516 /* UIKit.framework */; };
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0423A10F49C24B9EA70FFC8C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8D889ABE18D2543B001198F5 /* CCEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventDetailsViewController.h; sourceTree = "<group>"; };
+		8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventDetailsViewController.m; sourceTree = "<group>"; };
+		8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCEventDetailsViewController.xib; sourceTree = "<group>"; };
+		8D889AC318D25B2C001198F5 /* CCCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarCell.h; sourceTree = "<group>"; };
+		8D889AC418D25B2C001198F5 /* CCCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarCell.m; sourceTree = "<group>"; };
 		8DFC27F218CFE27B00822516 /* Lux Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lux Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFC27F518CFE27B00822516 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DFC27F718CFE27B00822516 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,6 +69,7 @@
 		8DFC283718D224F500822516 /* CCCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarController.m; sourceTree = "<group>"; };
 		8DFC283918D23FF500822516 /* CCCalendarEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarEvents.h; sourceTree = "<group>"; };
 		8DFC283A18D23FF500822516 /* CCCalendarEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarEvents.m; sourceTree = "<group>"; };
+		C6354AEFB1AB408A977D3DC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +80,7 @@
 				8DFC27F818CFE27B00822516 /* CoreGraphics.framework in Frameworks */,
 				8DFC27FA18CFE27B00822516 /* UIKit.framework in Frameworks */,
 				8DFC27F618CFE27B00822516 /* Foundation.framework in Frameworks */,
+				68D3F98B3D9846B298E33B50 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,7 @@
 				8DFC27FB18CFE27B00822516 /* Lux Coffee */,
 				8DFC27F418CFE27B00822516 /* Frameworks */,
 				8DFC27F318CFE27B00822516 /* Products */,
+				0423A10F49C24B9EA70FFC8C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +123,7 @@
 				8DFC27F718CFE27B00822516 /* CoreGraphics.framework */,
 				8DFC27F918CFE27B00822516 /* UIKit.framework */,
 				8DFC281418CFE27B00822516 /* XCTest.framework */,
+				C6354AEFB1AB408A977D3DC7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +133,8 @@
 			children = (
 				8DFC280418CFE27B00822516 /* CCAppDelegate.h */,
 				8DFC280518CFE27B00822516 /* CCAppDelegate.m */,
+				8D889AC318D25B2C001198F5 /* CCCalendarCell.h */,
+				8D889AC418D25B2C001198F5 /* CCCalendarCell.m */,
 				8DFC280718CFE27B00822516 /* Main.storyboard */,
 				8DFC283618D224F500822516 /* CCCalendarController.h */,
 				8DFC283718D224F500822516 /* CCCalendarController.m */,
@@ -126,6 +142,9 @@
 				8DFC283418D222E000822516 /* CCMainViewController.m */,
 				8DFC283918D23FF500822516 /* CCCalendarEvents.h */,
 				8DFC283A18D23FF500822516 /* CCCalendarEvents.m */,
+				8D889ABE18D2543B001198F5 /* CCEventDetailsViewController.h */,
+				8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */,
+				8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */,
 				8DFC281A18CFE27B00822516 /* Lux CoffeeTests */,
 				8DFC280D18CFE27B00822516 /* Images.xcassets */,
 				8DFC27FC18CFE27B00822516 /* Supporting Files */,
@@ -169,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DFC282418CFE27B00822516 /* Build configuration list for PBXNativeTarget "Lux Coffee" */;
 			buildPhases = (
+				F58F5C0B985241FEBEFCA135 /* Check Pods Manifest.lock */,
 				8DFC27EE18CFE27B00822516 /* Sources */,
 				8DFC27EF18CFE27B00822516 /* Frameworks */,
 				8DFC27F018CFE27B00822516 /* Resources */,
+				D76FE7A328BF40AB80FA3DB5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D889AC218D2543B001198F5 /* CCEventDetailsViewController.xib in Resources */,
 				8DFC280E18CFE27B00822516 /* Images.xcassets in Resources */,
 				8DFC280018CFE27B00822516 /* InfoPlist.strings in Resources */,
 				8DFC280918CFE27B00822516 /* Main.storyboard in Resources */,
@@ -255,6 +277,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D76FE7A328BF40AB80FA3DB5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F58F5C0B985241FEBEFCA135 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DFC27EE18CFE27B00822516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +319,8 @@
 				8DFC283818D224F500822516 /* CCCalendarController.m in Sources */,
 				8DFC283B18D23FF500822516 /* CCCalendarEvents.m in Sources */,
 				8DFC283518D222E000822516 /* CCMainViewController.m in Sources */,
+				8D889AC118D2543B001198F5 /* CCEventDetailsViewController.m in Sources */,
+				8D889AC518D25B2C001198F5 /* CCCalendarCell.m in Sources */,
 				8DFC280218CFE27B00822516 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +445,7 @@
 		};
 		8DFC282518CFE27B00822516 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0423A10F49C24B9EA70FFC8C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -401,6 +459,7 @@
 		};
 		8DFC282618CFE27B00822516 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0423A10F49C24B9EA70FFC8C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -473,6 +532,7 @@
 				8DFC282618CFE27B00822516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DFC282718CFE27B00822516 /* Build configuration list for PBXNativeTarget "Lux CoffeeTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +541,7 @@
 				8DFC282918CFE27B00822516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

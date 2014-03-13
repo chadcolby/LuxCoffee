@@ -9,11 +9,14 @@
 #import "CCMainViewController.h"
 #import "CCCalendarController.h"
 #import "CCCalendarEvents.h"
+#import "UIViewController+CWPopup.h"
+#import "CCEventDetailsViewController.h"
 
-@interface CCMainViewController () <GoogleCalendarDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface CCMainViewController () <GoogleCalendarDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSArray *eventsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) CCEventDetailsViewController *eventDetailsVC;
 
 - (IBAction)updateCalendar:(id)sender;
 
@@ -28,6 +31,9 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    self.useBlurForPopup = YES;
+    
+    [self setUpGestureRecognizerForEventDetails];
     [[CCCalendarController sharedCalendarManager]updateEventsFromGoogleCalendar];
     
 }
@@ -38,20 +44,32 @@
 
 }
 
-- (IBAction)updateCalendar:(id)sender {
-    
-    NSLog(@"pressed");
+- (IBAction)updateCalendar:(id)sender
+{
     self.eventsArray = [[CCCalendarController sharedCalendarManager] updatedEventsList];
+
     [self.tableView reloadData];
 }
 
 - (void)updateReturnedArray
 {
-
-    NSLog(@"final: %d", self.eventsArray.count );
     [self.tableView reloadData];
 }
 
+- (void)setUpGestureRecognizerForEventDetails
+{
+    UITapGestureRecognizer *tapToShowEventDetails = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDetails)];
+    tapToShowEventDetails.numberOfTapsRequired = 1;
+    tapToShowEventDetails.delegate = self;
+    [self.view addGestureRecognizer:tapToShowEventDetails];
+}
+
+- (void)dismissDetails
+{
+    if (self.popupViewController != nil) {
+        [self dismissPopupViewControllerAnimated:YES completion:nil];
+    }
+}
 
 #pragma mark - table view data source methods
 
@@ -73,8 +91,26 @@
     CCCalendarEvents *event = self.eventsArray[indexPath.row];
     
     cell.textLabel.text = event.titleString;
+    cell.detailTextLabel.text = @"Date";
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    self.eventDetailsVC = [[CCEventDetailsViewController alloc] initWithNibName:@"CCEventDetailsViewController" bundle:nil];
+    self.eventDetailsVC.view.frame = CGRectMake(20, 20, self.view.frame.size.width - 100, self.view.frame.size.height - 300);
+    
+    UILabel *detailsLabel = [[UILabel alloc] init];
+    detailsLabel.frame = CGRectMake(self.view.bounds.origin.x + 10, self.view.bounds.size.height - 528, self.eventDetailsVC.view.frame.size.width - 20, self.eventDetailsVC.view.frame.size.height);
+
+    CCCalendarEvents *event = self.eventsArray[indexPath.row];
+    
+    detailsLabel.numberOfLines = 0;
+    detailsLabel.text = event.contentString;
+    [detailsLabel sizeToFit];
+    [self.eventDetailsVC.view addSubview:detailsLabel];
+    
+    [self presentPopupViewController:self.eventDetailsVC animated:YES completion:nil];
+}
 @end
