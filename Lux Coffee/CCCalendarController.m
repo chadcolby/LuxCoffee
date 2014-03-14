@@ -32,7 +32,6 @@
     dispatch_once(&pred, ^{
         sharedCalendar = [[CCCalendarController alloc] init];
         if (!sharedCalendar.eventsDownloadQueue) {
-            NSLog(@"One controller to rule them all");
             [sharedCalendar setUpCalendar];
         }
     });
@@ -79,11 +78,23 @@
                 NSDictionary *googleCalendarData = (NSDictionary *)jsonData;
                 
                 NSArray *allEvents = [(NSDictionary *)[googleCalendarData objectForKey:@"feed"] objectForKey:@"entry"];
-                        
+      
+            NSDateFormatter *eventFormat = [[NSDateFormatter alloc] init];
+            [eventFormat setLocale:[NSLocale currentLocale]];
+            [eventFormat setDateStyle:NSDateFormatterMediumStyle];
+            [eventFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSzzz"];
+            [eventFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"PST"]];
+        
         for (NSDictionary *entry in allEvents) {
+
             CCCalendarEvents *event = [[CCCalendarEvents alloc] init];
             event.titleString = [[entry objectForKey:@"title"] objectForKey:@"$t"];
             event.contentString = [[entry objectForKey:@"content"] objectForKey:@"$t"];
+            NSArray *eventStartDate = [entry objectForKey:@"gd$when"];
+            NSString *tempString = [[eventStartDate firstObject] objectForKey:@"startTime"];
+            NSDate *startDate = [eventFormat dateFromString:tempString];
+            NSLog(@">>> %@", startDate);
+
             [self.eventsArray addObject:event];
 
         }

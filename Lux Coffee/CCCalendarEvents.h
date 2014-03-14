@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *titleString;
 @property (strong, nonatomic) NSString *contentString;
 @property (strong, nonatomic) NSString *locationString;
+@property (strong, nonatomic) NSString *startDate;
 
 @end

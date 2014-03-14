@@ -87,13 +87,18 @@
 {
     static NSString *cellIdentifier = @"calendarCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+
     CCCalendarEvents *event = self.eventsArray[indexPath.row];
     
     cell.textLabel.text = event.titleString;
-    cell.detailTextLabel.text = @"Date";
+    //cell.detailTextLabel.text = event.startDate;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.f;
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
