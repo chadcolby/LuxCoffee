@@ -90,10 +90,10 @@
             CCCalendarEvents *event = [[CCCalendarEvents alloc] init];
             event.titleString = [[entry objectForKey:@"title"] objectForKey:@"$t"];
             event.contentString = [[entry objectForKey:@"content"] objectForKey:@"$t"];
-            NSArray *eventStartDate = [entry objectForKey:@"gd$when"];
-            NSString *tempString = [[eventStartDate firstObject] objectForKey:@"startTime"];
-            NSDate *startDate = [eventFormat dateFromString:tempString];
-            NSLog(@">>> %@", startDate);
+            //NSArray *eventStartDate = [entry objectForKey:@"gd$when"];
+            //NSString *tempString = [[eventStartDate firstObject] objectForKey:@"startTime"];
+
+
 
             [self.eventsArray addObject:event];
 

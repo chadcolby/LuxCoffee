@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		68D3F98B3D9846B298E33B50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6354AEFB1AB408A977D3DC7 /* libPods.a */; };
+		8D69847618D4DC8A0017F646 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D69847418D4DC8A0017F646 /* Icon-Small-50.png */; };
+		8D69847718D4DC8A0017F646 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D69847518D4DC8A0017F646 /* Icon-Small-50@2x.png */; };
 		8D889AC118D2543B001198F5 /* CCEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */; };
 		8D889AC218D2543B001198F5 /* CCEventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */; };
-		8D889AC518D25B2C001198F5 /* CCCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889AC418D25B2C001198F5 /* CCCalendarCell.m */; };
+		8D889ACE18D378ED001198F5 /* CCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889ACD18D378ED001198F5 /* CCMenuViewController.m */; };
+		8D889AD118D37940001198F5 /* CCRootMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889AD018D37940001198F5 /* CCRootMenuViewController.m */; };
+		8D889ADD18D4D0A6001198F5 /* luxBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D889ADC18D4D0A6001198F5 /* luxBG2.png */; };
+		8D889AE118D4D107001198F5 /* CCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D889AE018D4D107001198F5 /* CCAboutViewController.m */; };
 		8DFC27F618CFE27B00822516 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F518CFE27B00822516 /* Foundation.framework */; };
 		8DFC27F818CFE27B00822516 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F718CFE27B00822516 /* CoreGraphics.framework */; };
 		8DFC27FA18CFE27B00822516 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F918CFE27B00822516 /* UIKit.framework */; };
@@ -41,11 +46,18 @@
 
 /* Begin PBXFileReference section */
 		0423A10F49C24B9EA70FFC8C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8D69847418D4DC8A0017F646 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		8D69847518D4DC8A0017F646 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
 		8D889ABE18D2543B001198F5 /* CCEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventDetailsViewController.h; sourceTree = "<group>"; };
 		8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventDetailsViewController.m; sourceTree = "<group>"; };
 		8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCEventDetailsViewController.xib; sourceTree = "<group>"; };
-		8D889AC318D25B2C001198F5 /* CCCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarCell.h; sourceTree = "<group>"; };
-		8D889AC418D25B2C001198F5 /* CCCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarCell.m; sourceTree = "<group>"; };
+		8D889ACC18D378ED001198F5 /* CCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuViewController.h; sourceTree = "<group>"; };
+		8D889ACD18D378ED001198F5 /* CCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuViewController.m; sourceTree = "<group>"; };
+		8D889ACF18D37940001198F5 /* CCRootMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRootMenuViewController.h; sourceTree = "<group>"; };
+		8D889AD018D37940001198F5 /* CCRootMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRootMenuViewController.m; sourceTree = "<group>"; };
+		8D889ADC18D4D0A6001198F5 /* luxBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luxBG2.png; sourceTree = "<group>"; };
+		8D889ADF18D4D107001198F5 /* CCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAboutViewController.h; sourceTree = "<group>"; };
+		8D889AE018D4D107001198F5 /* CCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAboutViewController.m; sourceTree = "<group>"; };
 		8DFC27F218CFE27B00822516 /* Lux Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lux Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFC27F518CFE27B00822516 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DFC27F718CFE27B00822516 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +109,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D889AC718D356A6001198F5 /* Events Page */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC283618D224F500822516 /* CCCalendarController.h */,
+				8DFC283718D224F500822516 /* CCCalendarController.m */,
+				8DFC283318D222E000822516 /* CCMainViewController.h */,
+				8DFC283418D222E000822516 /* CCMainViewController.m */,
+				8DFC283918D23FF500822516 /* CCCalendarEvents.h */,
+				8DFC283A18D23FF500822516 /* CCCalendarEvents.m */,
+				8D889ABE18D2543B001198F5 /* CCEventDetailsViewController.h */,
+				8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */,
+				8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */,
+			);
+			name = "Events Page";
+			sourceTree = "<group>";
+		};
+		8D889ACB18D37852001198F5 /* Slide Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8D889ACC18D378ED001198F5 /* CCMenuViewController.h */,
+				8D889ACD18D378ED001198F5 /* CCMenuViewController.m */,
+				8D889ACF18D37940001198F5 /* CCRootMenuViewController.h */,
+				8D889AD018D37940001198F5 /* CCRootMenuViewController.m */,
+			);
+			name = "Slide Menu";
+			sourceTree = "<group>";
+		};
+		8D889ADE18D4D0E9001198F5 /* Lux Communitites */ = {
+			isa = PBXGroup;
+			children = (
+				8D889ADF18D4D107001198F5 /* CCAboutViewController.h */,
+				8D889AE018D4D107001198F5 /* CCAboutViewController.m */,
+			);
+			name = "Lux Communitites";
+			sourceTree = "<group>";
+		};
 		8DFC27E918CFE27B00822516 = {
 			isa = PBXGroup;
 			children = (
@@ -131,22 +179,17 @@
 		8DFC27FB18CFE27B00822516 /* Lux Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				8D889ADE18D4D0E9001198F5 /* Lux Communitites */,
+				8D889ACB18D37852001198F5 /* Slide Menu */,
+				8D889AC718D356A6001198F5 /* Events Page */,
 				8DFC280418CFE27B00822516 /* CCAppDelegate.h */,
 				8DFC280518CFE27B00822516 /* CCAppDelegate.m */,
-				8D889AC318D25B2C001198F5 /* CCCalendarCell.h */,
-				8D889AC418D25B2C001198F5 /* CCCalendarCell.m */,
 				8DFC280718CFE27B00822516 /* Main.storyboard */,
-				8DFC283618D224F500822516 /* CCCalendarController.h */,
-				8DFC283718D224F500822516 /* CCCalendarController.m */,
-				8DFC283318D222E000822516 /* CCMainViewController.h */,
-				8DFC283418D222E000822516 /* CCMainViewController.m */,
-				8DFC283918D23FF500822516 /* CCCalendarEvents.h */,
-				8DFC283A18D23FF500822516 /* CCCalendarEvents.m */,
-				8D889ABE18D2543B001198F5 /* CCEventDetailsViewController.h */,
-				8D889ABF18D2543B001198F5 /* CCEventDetailsViewController.m */,
-				8D889AC018D2543B001198F5 /* CCEventDetailsViewController.xib */,
 				8DFC281A18CFE27B00822516 /* Lux CoffeeTests */,
 				8DFC280D18CFE27B00822516 /* Images.xcassets */,
+				8D69847418D4DC8A0017F646 /* Icon-Small-50.png */,
+				8D69847518D4DC8A0017F646 /* Icon-Small-50@2x.png */,
+				8D889ADC18D4D0A6001198F5 /* luxBG2.png */,
 				8DFC27FC18CFE27B00822516 /* Supporting Files */,
 			);
 			path = "Lux Coffee";
@@ -262,7 +305,10 @@
 			files = (
 				8D889AC218D2543B001198F5 /* CCEventDetailsViewController.xib in Resources */,
 				8DFC280E18CFE27B00822516 /* Images.xcassets in Resources */,
+				8D69847718D4DC8A0017F646 /* Icon-Small-50@2x.png in Resources */,
 				8DFC280018CFE27B00822516 /* InfoPlist.strings in Resources */,
+				8D69847618D4DC8A0017F646 /* Icon-Small-50.png in Resources */,
+				8D889ADD18D4D0A6001198F5 /* luxBG2.png in Resources */,
 				8DFC280918CFE27B00822516 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,9 +364,11 @@
 				8DFC280618CFE27B00822516 /* CCAppDelegate.m in Sources */,
 				8DFC283818D224F500822516 /* CCCalendarController.m in Sources */,
 				8DFC283B18D23FF500822516 /* CCCalendarEvents.m in Sources */,
+				8D889AE118D4D107001198F5 /* CCAboutViewController.m in Sources */,
+				8D889AD118D37940001198F5 /* CCRootMenuViewController.m in Sources */,
 				8DFC283518D222E000822516 /* CCMainViewController.m in Sources */,
+				8D889ACE18D378ED001198F5 /* CCMenuViewController.m in Sources */,
 				8D889AC118D2543B001198F5 /* CCEventDetailsViewController.m in Sources */,
-				8D889AC518D25B2C001198F5 /* CCCalendarCell.m in Sources */,
 				8DFC280218CFE27B00822516 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
