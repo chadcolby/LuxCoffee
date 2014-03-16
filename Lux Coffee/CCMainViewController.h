@@ -12,7 +12,4 @@
 
 @property (nonatomic) BOOL shouldRefresh;
 
-- (void)refreshEventsList:(id)sender;
-
-
 @end

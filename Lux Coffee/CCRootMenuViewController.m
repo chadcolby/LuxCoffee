@@ -9,6 +9,7 @@
 #import "CCRootMenuViewController.h"
 #import "CCMainViewController.h"
 #import "CCAboutViewController.h"
+#import "CCLuxCoffeeViewController.h"
 
 @interface CCRootMenuViewController ()
 
@@ -16,6 +17,7 @@
 @property (strong, nonatomic) CCMenuViewController *slideViewController;
 @property (strong, nonatomic) CCAboutViewController *luxCommunitiesViewController;
 @property (strong, nonatomic) NSMutableArray *navigationArray;
+@property (strong, nonatomic) CCLuxCoffeeViewController *coffeeController;
 
 @end
 
@@ -147,85 +149,66 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.row == 2) {
-        if (self.luxCommunitiesViewController == nil) {
-            self.luxCommunitiesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"luxCommunitiesAbout"];
-            self.luxCommunitiesViewController.delegate = self;
+    switch (indexPath.row) {
+        case 0:
             
-            [self addChildViewController:self.luxCommunitiesViewController];
-            [UIView transitionWithView:self.view duration:0.4 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
-                [self.view addSubview:self.luxCommunitiesViewController.view];
-            } completion:^(BOOL finished) {
+            break;
+        case 1:
+            if (self.coffeeController == nil) {
+                self.coffeeController = [self.storyboard instantiateViewControllerWithIdentifier:@"coffeeViewController"];
+                self.coffeeController.delegate = self;
+                
+                [self addChildViewController:self.coffeeController];
+                [self.view addSubview:self.coffeeController.view];
                 [self.slideViewController.view removeFromSuperview];
-                NSLog(@"Removed");
-            }];
-            [self.luxCommunitiesViewController didMoveToParentViewController:self];
-        }   else {
-            NSLog(@"Its already opened");
-        }
-//        [self.slideViewController.view removeFromSuperview];
+                [self.coffeeController didMoveToParentViewController:self];
+            }   else {
+                [self transitionFromViewController:self.luxCommunitiesViewController toViewController:self.coffeeController duration:0.2 options:UIViewAnimationOptionTransitionNone animations:^{
+                    
+                } completion:^(BOOL finished) {
+                    [self hideMenu:self.coffeeController];
+                }];
+            }
+            
+            break;
+        case 2:
+            if (self.luxCommunitiesViewController == nil) {
+                self.luxCommunitiesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"luxCommunitiesAbout"];
+                self.luxCommunitiesViewController.delegate = self;
+                
+                [self addChildViewController:self.luxCommunitiesViewController];
+                [UIView transitionWithView:self.view duration:0.4 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
+                    [self.view addSubview:self.luxCommunitiesViewController.view];
+                } completion:^(BOOL finished) {
+                    [self.slideViewController.view removeFromSuperview];
 
-        
-//        [self addChildViewController:self.luxCommunitiesViewController];
-//        self.luxCommunitiesViewController.view.frame = self.tableView.frame;
-//        [self.view addSubview:self.luxCommunitiesViewController.view];
-//        [self.luxCommunitiesViewController didMoveToParentViewController:self];
-        
-//        [self.slideViewController.view removeFromSuperview];
-
+                }];
+                [self.luxCommunitiesViewController didMoveToParentViewController:self];
+            }   else {
+                [self transitionFromViewController:self.coffeeController toViewController:self.luxCommunitiesViewController duration:0.4 options:UIViewAnimationOptionTransitionNone animations:^{
+                    
+                } completion:^(BOOL finished) {
+                    [self hideMenu:self.luxCommunitiesViewController];
+                }];
+            }
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            break;
     }
     
 }
 
 #pragma mark - Slide Menu Delegate Methods
 
-//- (void)showMenu
-//{
-//    [UIView animateWithDuration:0.4 animations:^{
-//        self.slideViewController.view.frame = CGRectMake(self.tableView.frame.size.width * 0.7,
-//                                                         self.slideViewController.view.frame.origin.y,
-//                                                         self.slideViewController.view.frame.size.width,
-//                                                         self.slideViewController.view.frame.size.height);
-//        
-//    } completion:^(BOOL finished) {
-//        [self.slideViewController creatTapGesture];
-////        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(coversMenu:)];
-////        [self.slideViewController.view addGestureRecognizer:tap];
-//    }];
-//    
-//}
-//
-//- (void)hideMenu
-//{
-//    [UIView animateWithDuration:.15 animations:^{
-//        self.slideViewController.view.frame = CGRectMake(self.slideViewController.view.frame.origin.x + 6.f,
-//                                                         self.slideViewController.view.frame.origin.y,
-//                                                         self.slideViewController.view.frame.size.width,
-//                                                         self.slideViewController.view.frame.size.height);
-//    } completion:^(BOOL finished) {
-//        [UIView animateWithDuration:.1 animations:^{
-//            self.slideViewController.view.frame = self.view.frame;
-//        } completion:^(BOOL finished) {
-//            [UIView animateWithDuration:.075 animations:^{
-//                self.slideViewController.view.frame = CGRectMake(self.slideViewController.view.frame.origin.x + 3.f,
-//                                                                 self.slideViewController.view.frame.origin.y,
-//                                                                 self.slideViewController.view.frame.size.width,
-//                                                                 self.slideViewController.view.frame.size.height);
-//            } completion:^(BOOL finished) {
-//                [UIView animateWithDuration:.033 animations:^{
-//                    self.slideViewController.view.frame = self.view.frame;
-//                }];
-//            }];
-//        }];
-//    }];
-//
-//}
-
 - (void)showMenu:(UIViewController *)viewController
 {
     
     [UIView animateWithDuration:0.4 animations:^{
-        viewController.view.frame = CGRectMake(self.tableView.frame.size.width * 0.7,
+        viewController.view.frame = CGRectMake(self.tableView.frame.size.width * 0.6,
                                                          viewController.view.frame.origin.y,
                                                          viewController.view.frame.size.width,
                                                          viewController.view.frame.size.height);

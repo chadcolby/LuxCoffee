@@ -98,7 +98,7 @@
             [self.eventsArray addObject:event];
 
         }
-        
+        NSLog(@"%@", self.eventsArray);
         [self.delegate updateReturnedArray];
     }];
     

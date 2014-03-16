@@ -19,6 +19,11 @@
 		8DEE558918D530220079539A /* smallClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE558818D530220079539A /* smallClose.png */; };
 		8DEE558E18D533B00079539A /* calendar50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE558C18D533B00079539A /* calendar50.png */; };
 		8DEE558F18D533B00079539A /* calendar50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE558D18D533B00079539A /* calendar50@2x.png */; };
+		8DEE559218D53C060079539A /* luxCoffeeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE559118D53C060079539A /* luxCoffeeBG.png */; };
+		8DEE559518D53CA40079539A /* CCLuxCoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE559418D53CA40079539A /* CCLuxCoffeeViewController.m */; };
+		8DEE559818D542E50079539A /* ios7_app_icon_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE559618D542E50079539A /* ios7_app_icon_iphone.png */; };
+		8DEE559918D542E50079539A /* ios7_app_icon_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE559718D542E50079539A /* ios7_app_icon_iphone@2x.png */; };
+		8DEE559B18D544980079539A /* LuxCoffeeBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE559A18D544980079539A /* LuxCoffeeBG2.png */; };
 		8DFC27F618CFE27B00822516 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F518CFE27B00822516 /* Foundation.framework */; };
 		8DFC27F818CFE27B00822516 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F718CFE27B00822516 /* CoreGraphics.framework */; };
 		8DFC27FA18CFE27B00822516 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFC27F918CFE27B00822516 /* UIKit.framework */; };
@@ -64,6 +69,12 @@
 		8DEE558818D530220079539A /* smallClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallClose.png; sourceTree = "<group>"; };
 		8DEE558C18D533B00079539A /* calendar50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar50.png; sourceTree = "<group>"; };
 		8DEE558D18D533B00079539A /* calendar50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar50@2x.png"; sourceTree = "<group>"; };
+		8DEE559118D53C060079539A /* luxCoffeeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luxCoffeeBG.png; sourceTree = "<group>"; };
+		8DEE559318D53CA40079539A /* CCLuxCoffeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLuxCoffeeViewController.h; sourceTree = "<group>"; };
+		8DEE559418D53CA40079539A /* CCLuxCoffeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLuxCoffeeViewController.m; sourceTree = "<group>"; };
+		8DEE559618D542E50079539A /* ios7_app_icon_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios7_app_icon_iphone.png; sourceTree = "<group>"; };
+		8DEE559718D542E50079539A /* ios7_app_icon_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7_app_icon_iphone@2x.png"; sourceTree = "<group>"; };
+		8DEE559A18D544980079539A /* LuxCoffeeBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LuxCoffeeBG2.png; sourceTree = "<group>"; };
 		8DFC27F218CFE27B00822516 /* Lux Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lux Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFC27F518CFE27B00822516 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DFC27F718CFE27B00822516 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,7 +166,11 @@
 		8DEE559018D534A30079539A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8DEE559618D542E50079539A /* ios7_app_icon_iphone.png */,
+				8DEE559718D542E50079539A /* ios7_app_icon_iphone@2x.png */,
+				8DEE559118D53C060079539A /* luxCoffeeBG.png */,
 				8DEE558C18D533B00079539A /* calendar50.png */,
+				8DEE559A18D544980079539A /* LuxCoffeeBG2.png */,
 				8DEE558D18D533B00079539A /* calendar50@2x.png */,
 				8DEE558818D530220079539A /* smallClose.png */,
 				8D69847418D4DC8A0017F646 /* Icon-Small-50.png */,
@@ -204,6 +219,8 @@
 				8DFC280418CFE27B00822516 /* CCAppDelegate.h */,
 				8DFC280518CFE27B00822516 /* CCAppDelegate.m */,
 				8DFC280718CFE27B00822516 /* Main.storyboard */,
+				8DEE559318D53CA40079539A /* CCLuxCoffeeViewController.h */,
+				8DEE559418D53CA40079539A /* CCLuxCoffeeViewController.m */,
 				8DFC281A18CFE27B00822516 /* Lux CoffeeTests */,
 				8DFC280D18CFE27B00822516 /* Images.xcassets */,
 				8DEE559018D534A30079539A /* Images */,
@@ -325,11 +342,15 @@
 				8D889AC218D2543B001198F5 /* CCEventDetailsViewController.xib in Resources */,
 				8DFC280E18CFE27B00822516 /* Images.xcassets in Resources */,
 				8D69847718D4DC8A0017F646 /* Icon-Small-50@2x.png in Resources */,
+				8DEE559218D53C060079539A /* luxCoffeeBG.png in Resources */,
+				8DEE559918D542E50079539A /* ios7_app_icon_iphone@2x.png in Resources */,
 				8DEE558E18D533B00079539A /* calendar50.png in Resources */,
+				8DEE559818D542E50079539A /* ios7_app_icon_iphone.png in Resources */,
 				8DFC280018CFE27B00822516 /* InfoPlist.strings in Resources */,
 				8D69847618D4DC8A0017F646 /* Icon-Small-50.png in Resources */,
 				8D889ADD18D4D0A6001198F5 /* luxBG2.png in Resources */,
 				8DFC280918CFE27B00822516 /* Main.storyboard in Resources */,
+				8DEE559B18D544980079539A /* LuxCoffeeBG2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +408,7 @@
 				8D889AE118D4D107001198F5 /* CCAboutViewController.m in Sources */,
 				8D889AD118D37940001198F5 /* CCRootMenuViewController.m in Sources */,
 				8DFC283518D222E000822516 /* CCMainViewController.m in Sources */,
+				8DEE559518D53CA40079539A /* CCLuxCoffeeViewController.m in Sources */,
 				8D889ACE18D378ED001198F5 /* CCMenuViewController.m in Sources */,
 				8D889AC118D2543B001198F5 /* CCEventDetailsViewController.m in Sources */,
 				8DFC280218CFE27B00822516 /* main.m in Sources */,

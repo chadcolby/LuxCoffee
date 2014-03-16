@@ -15,9 +15,9 @@
 @interface CCMainViewController () <GoogleCalendarDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSArray *eventsArray;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CCEventDetailsViewController *eventDetailsVC;
-
+@property (strong, nonatomic) UIButton *closeButton;
 
 
 @end
@@ -31,28 +31,31 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doTheRefreshThang:) name:@"shouldReloadTableView" object:nil];
+    
     self.useBlurForPopup = YES;
     
     [self setUpGestureRecognizerForEventDetails];
     self.navigationController.navigationBarHidden = YES;
     
-    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 60, 50 , 50)];
-    [closeButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    closeButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"smallClose"]];
-    closeButton.alpha = 0.8f;
-    [self.view addSubview:closeButton];
+    self.closeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 60, 50 , 50)];
+    [self.closeButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.closeButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"smallClose"]];
+    self.closeButton.alpha = 0.8f;
+    [self.view addSubview:self.closeButton];
     
+}
+
+- (void)doTheRefreshThang:(NSNotification *)sender
+{
+    self.eventsArray = [[CCCalendarController sharedCalendarManager] updatedEventsList];
+    
+    [self.tableView reloadData];
 }
 
 - (void)buttonAction:(id)sender
 {
     [self.view removeFromSuperview];
-}
-- (void)refreshEventsList:(id)sender
-{
-    self.eventsArray = [[CCCalendarController sharedCalendarManager] updatedEventsList];
-
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +76,7 @@
 {
     if (self.popupViewController != nil) {
         [self dismissPopupViewControllerAnimated:YES completion:nil];
+        self.closeButton.enabled = YES;
     }
 }
 
@@ -120,6 +124,8 @@
     detailsLabel.text = event.contentString;
     [detailsLabel sizeToFit];
     [self.eventDetailsVC.view addSubview:detailsLabel];
+    
+    self.closeButton.enabled = NO;
     
     [self presentPopupViewController:self.eventDetailsVC animated:YES completion:nil];
 }
