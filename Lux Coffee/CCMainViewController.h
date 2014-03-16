@@ -10,4 +10,9 @@
 
 @interface CCMainViewController : UIViewController
 
+@property (nonatomic) BOOL shouldRefresh;
+
+- (void)refreshEventsList:(id)sender;
+
+
 @end

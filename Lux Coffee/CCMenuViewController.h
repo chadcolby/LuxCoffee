@@ -21,12 +21,13 @@
 @property(unsafe_unretained) id <SlideMenuDelegate> delegate;
 @property (nonatomic) BOOL shouldShowMenu;
 
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+
 - (void)revealMenu:(id)sender;
 - (void)creatPanGesture;
 - (void)creatTapGesture;
 - (void)slideToMenu:(id)sender;
 - (void)coverMenu:(id)sender;
-//- (void)showMenu;
-//- (void)hideMenu;
+
 
 @end

@@ -34,7 +34,7 @@
     
     [super viewDidLoad];
     
-    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 50, 50)];
+    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
     [menuButton addTarget:self action:@selector(revealMenu:) forControlEvents:UIControlEventTouchUpInside];
     menuButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon-Small-50"]];
     [self.view addSubview:menuButton];
@@ -52,12 +52,12 @@
 
 - (void)creatPanGesture
 {
-        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slideToMenu:)];
-        panGesture.minimumNumberOfTouches = 1;
-        panGesture.maximumNumberOfTouches = 1;
+        self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slideToMenu:)];
+        self.panGesture.minimumNumberOfTouches = 1;
+        self.panGesture.maximumNumberOfTouches = 1;
         
-        panGesture.delegate = self;
-        [self.view addGestureRecognizer:panGesture];
+        self.panGesture.delegate = self;
+        [self.view addGestureRecognizer:self.panGesture];
     
 }
 

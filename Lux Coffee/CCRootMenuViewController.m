@@ -32,7 +32,7 @@
 
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-
+    self.tableView.scrollEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -126,6 +126,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.text = [self.menuOptionsArray objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"AvenirNext-MediumItalic" size:20.f];
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.backgroundColor = [UIColor lightGrayColor];
     cell.textLabel.textColor = [UIColor whiteColor];

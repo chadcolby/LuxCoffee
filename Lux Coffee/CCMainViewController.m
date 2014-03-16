@@ -15,10 +15,10 @@
 @interface CCMainViewController () <GoogleCalendarDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSArray *eventsArray;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CCEventDetailsViewController *eventDetailsVC;
 
-- (IBAction)updateCalendar:(id)sender;
+
 
 @end
 
@@ -34,26 +34,31 @@
     self.useBlurForPopup = YES;
     
     [self setUpGestureRecognizerForEventDetails];
-    [[CCCalendarController sharedCalendarManager]updateEventsFromGoogleCalendar];
+    self.navigationController.navigationBarHidden = YES;
+    
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x - 25, self.view.frame.size.height - 60, 50 , 50)];
+    [closeButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    closeButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"smallClose"]];
+    closeButton.alpha = 0.8f;
+    [self.view addSubview:closeButton];
     
 }
 
-- (void)didReceiveMemoryWarning
+- (void)buttonAction:(id)sender
 {
-    [super didReceiveMemoryWarning];
-
+    [self.view removeFromSuperview];
 }
-
-- (IBAction)updateCalendar:(id)sender
+- (void)refreshEventsList:(id)sender
 {
     self.eventsArray = [[CCCalendarController sharedCalendarManager] updatedEventsList];
 
     [self.tableView reloadData];
 }
 
-- (void)updateReturnedArray
+- (void)didReceiveMemoryWarning
 {
-    [self.tableView reloadData];
+    [super didReceiveMemoryWarning];
+
 }
 
 - (void)setUpGestureRecognizerForEventDetails
@@ -118,4 +123,5 @@
     
     [self presentPopupViewController:self.eventDetailsVC animated:YES completion:nil];
 }
+
 @end
